@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dog Weight Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="dogForm">
+        <!-- Step 1: Dog's Name -->
+        <div class="step" id="step1">
+            <label for="dogName">Qual é o nome do seu cão?</label>
+            <input type="text" id="dogName" name="dogName" required>
+            <button type="button" onclick="nextStep(2)">Próximo</button>
+        </div>
+        
+        <!-- Step 2: Dog's Weight -->
+        <div class="step" id="step2" style="display: none;">
+            <label for="dogWeight">Qual é o peso do seu cão (em kg)?</label>
+            <input type="number" id="dogWeight" name="dogWeight" required>
+            <button type="button" onclick="generateLink()">Enviar</button>
+        </div>
+    </form>
+
+    <div id="result" style="display: none;">
+        <p>Seu link de vendas personalizado:</p>
+        <a id="salesLink" href="" target="_blank"></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
